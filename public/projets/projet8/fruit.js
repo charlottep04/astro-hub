@@ -1,0 +1,10 @@
+var tabFruit = ["pomme", "kiwi", "banane", "cerise", "orange", "poire", "fraise", "prune", "ananas", "pêche"];
+console.log("en minuscule:", tabFruit);
+var tabMajuscule = tabFruit.map(function (fruit) { return fruit.toUpperCase(); });
+console.log("en majuscule", tabMajuscule);
+var tabSansP = tabFruit.filter(function (fruit) { return fruit[0] != "p"; });
+console.log("sans les fruits commençant par p", tabSansP);
+var tabSansTab = tabFruit.reduce(function (a, b) { return a + " ," + b; });
+console.log("sans tableau: ", tabSansTab);
+var PremierFruit = tabFruit.find(function (fruit) { return fruit.length > 5; });
+console.log("premier fruit de plus de 5 lettres: ", PremierFruit);

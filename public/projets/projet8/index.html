@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>fruit.ts – Code + Terminal</title>
+
+  <!-- Prism pour coloration TypeScript -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      font-family: 'Courier New', monospace;
+      background-color: #2d2d2d;
+      color: white;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 1rem;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+
+    .left {
+      border-right: 2px solid #444;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    pre {
+      border-radius: 8px;
+      background-color: #1e1e1e;
+      padding: 1rem;
+    }
+
+    .terminal {
+      background-color: #000;
+      color: #00ff00;
+      padding: 1rem;
+      border-radius: 8px;
+      min-height: 300px;
+      white-space: pre-wrap;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Zone gauche : code source -->
+  <div class="left">
+    <h2>Code source (fruit.ts)</h2>
+    <pre><code id="ts-code" class="language-typescript">// Chargement...</code></pre>
+  </div>
+
+  <!-- Zone droite : terminal simulé -->
+  <div class="right">
+    <h2>Sortie terminal </h2>
+    <div id="terminal" class="terminal">[Terminal démarré...]\n</div>
+  </div>
+
+  <!-- Prism + chargement du .ts -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+
+  <!-- Affiche le contenu du fichier fruit.ts -->
+  <script>
+    fetch('./fruit.ts')
+      .then(r => r.text())
+      .then(code => {
+        const block = document.getElementById('ts-code');
+        block.textContent = code;
+        Prism.highlightElement(block);
+      });
+  </script>
+
+  <!-- Redirection du console.log vers la "console web" -->
+  <script>
+    const terminal = document.getElementById('terminal');
+    const originalLog = console.log;
+
+    console.log = (...args) => {
+      const output = args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : a).join(' ');
+      terminal.textContent += output + '\n';
+      originalLog.apply(console, args);
+    };
+  </script>
+
+  <!-- Chargement du JS compilé depuis TypeScript -->
+  <script type="module" src="./fruit.js"></script>
+</body>
+</html>

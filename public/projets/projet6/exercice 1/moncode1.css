@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+nav a {
+    display: block;
+    background-color: steelblue;  /* Fond bleu */
+    color: white;                 /* Texte blanc */
+    padding: 20px;                /* Espacement intérieur */
+    border: 3px solid lightblue;  /* Bordure bleu clair */
+    border-radius: 10px;          /* Coins arrondis */
+    width: 300px;                 /* Largeur de la boîte */
+    text-align: center;           /* Centrer le texte */
+    font-size: 18px;              /* Taille du texte */
+    }
+
