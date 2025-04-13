@@ -199,3 +199,42 @@ Your browser does not support the audio element.
 </audio> </li><li data-index="100" data-title="COEUR DE ICE (feat. Damso)" data-artist="Zola" data-img="https://api.deezer.com/album/417909937/image" data-audio="https://cdnt-preview.dzcdn.net/api/1/1/2/b/7/0/2b71456e3a420582a63ef30819f55e6d.mp3?hdnea=exp=1744552817~acl=/api/1/1/2/b/7/0/2b71456e3a420582a63ef30819f55e6d.mp3*~data=user_id=0,application_id=42~hmac=89198d0d2b723415dc12c2d94429196b38edc87f601693d0c0419464bb43133b"> <h3>100. COEUR DE ICE (feat. Damso)</h3> <p>Zola</p> <p>COEUR DE ICE (feat. Damso)</p> <!-- Affichage du titre de l'album --> <img src="https://api.deezer.com/album/417909937/image" alt="cover of COEUR DE ICE (feat. Damso)"> <audio controls="" preload="none"> <source src="https://cdnt-preview.dzcdn.net/api/1/1/2/b/7/0/2b71456e3a420582a63ef30819f55e6d.mp3?hdnea=exp=1744552817~acl=/api/1/1/2/b/7/0/2b71456e3a420582a63ef30819f55e6d.mp3*~data=user_id=0,application_id=42~hmac=89198d0d2b723415dc12c2d94429196b38edc87f601693d0c0419464bb43133b" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio> </li> </ul> <script type="module">document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("#playlist li").forEach(t=>{const e=t.getAttribute("data-index"),i=t.getAttribute("data-title"),a=t.getAttribute("data-artist");t.getAttribute("data-img"),t.getAttribute("data-audio"),console.log(`${e}. ${i} - ${a}`)})});</script> </body> </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev101 Telecom Paris</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .return-button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="return-button">Retour</a>
+</body>
+
+
+</html>

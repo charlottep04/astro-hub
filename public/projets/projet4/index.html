@@ -9,3 +9,41 @@ Vitesse du vent : <span id="windSpeed"></span> km/h (calcul effectué côté cli
 <br><br>
 Humidité relative : <span id="humidity"></span> % (calcul effectué côté client)
 <script type="module">async function r(){let e=await(await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.713325087950466&longitude=2.19976830245&current=relative_humidity_2m")).json();return console.log("obtenir l'humidité actuelle"),e.current.relative_humidity_2m}async function u(){let e=await(await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.713325087950466&longitude=2.19976830245&current=wind_speed_10m")).json();return console.log("obtenir la vitesse du vent actuelle"),e.current.wind_speed_10m}let o=await r(),a=await u(),t=document.getElementById("windSpeed"),i=document.getElementById("humidity");t!=null&&(t.innerHTML=a.toString());i!=null&&(i.innerHTML=o.toString());</script> </body> </html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev101 Telecom Paris</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .return-button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="return-button">Retour</a>
+</body>
+
+
+</html>

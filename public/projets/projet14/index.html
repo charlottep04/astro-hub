@@ -1,1 +1,39 @@
 <!DOCTYPE html><h1>Derniers tremblements de terre</h1> <ul id="earthquake-list">Chargement...</ul> <script type="module">class i{async getEarthquakesFromUSGS(){try{return(await(await fetch("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=yesterday&endtime=today&minmagnitude=4")).json()).features}catch(e){return console.error("Une erreur est survenue lors de la récupération des données de tremblement de terre :",e),[]}}async displayEarthquakes(){try{const e=await this.getEarthquakesFromUSGS(),t=document.getElementById("earthquake-list");t.innerHTML="",e.forEach(r=>{const n=new Date(r.properties.time),o={year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",timeZone:"Europe/Paris"},a=`${n.toLocaleDateString("fr-FR",o)} - ${r.properties.mag} - ${r.properties.place}`;console.log(a);const s=document.createElement("li");s.textContent=a,t.appendChild(s)})}catch(e){console.error("Erreur d'affichage des séismes :",e)}}}const c=new i;c.displayEarthquakes();</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev101 Telecom Paris</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .return-button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="return-button">Retour</a>
+</body>
+
+
+</html>
