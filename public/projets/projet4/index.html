@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>WebDev101 Telecom Paris</title></head> <body>
+Conditions météo à Télécom Paris (48.713325087950466, 2.19976830245 )
+<br><br>
+Température actuelle : 16°C (calcul effectué côté serveur)
+<br><br>
+Couverture nuageuse : 58% (calcul effectué côté serveur)
+<br><br>
+Vitesse du vent : <span id="windSpeed"></span> km/h (calcul effectué côté client)
+<br><br>
+Humidité relative : <span id="humidity"></span> % (calcul effectué côté client)
+<script type="module">async function r(){let e=await(await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.713325087950466&longitude=2.19976830245&current=relative_humidity_2m")).json();return console.log("obtenir l'humidité actuelle"),e.current.relative_humidity_2m}async function u(){let e=await(await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.713325087950466&longitude=2.19976830245&current=wind_speed_10m")).json();return console.log("obtenir la vitesse du vent actuelle"),e.current.wind_speed_10m}let o=await r(),a=await u(),t=document.getElementById("windSpeed"),i=document.getElementById("humidity");t!=null&&(t.innerHTML=a.toString());i!=null&&(i.innerHTML=o.toString());</script> </body> </html>

@@ -1,0 +1,29 @@
+---
+const projets = [
+  "projet2", "projet3",
+  "projet4", "projet5",
+  "projet7", "projet14", "projet15"
+];
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mes projets Astro</title>
+  </head>
+  <body style="font-family: sans-serif; padding: 2rem;">
+    <h1>🌌 Mes Démonstrations Astro</h1>
+
+    {projets.map((nom) => (
+      <section style="margin-bottom: 3rem;">
+        <h2>{nom}</h2>
+        <iframe
+          src={`/projets/${nom}/index.html`}
+          width="100%"
+          height="600"
+          style="border: 1px solid #ddd; border-radius: 8px;"
+        ></iframe>
+      </section>
+    ))}
+  </body>
+</html>
