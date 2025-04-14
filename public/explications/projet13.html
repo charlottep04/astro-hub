@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet13/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercices</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercices</h1>
+
+  <h2>Exercice 1</h2>
+  <p>
+    Créez une fonction <code>calculateSumAsync</code> qui prend deux nombres comme arguments et retourne une promesse (<code>Promise</code>) qui se résout à leur somme après un délai de 3 secondes.
+  </p>
+  <p>
+    Utilisez <code>async</code> et <code>await</code> pour appeler <code>calculateSumAsync</code> dans une autre fonction <code>printSum</code>. <code>printSum</code> doit afficher le message <code>"Calcul en cours..."</code> avant d'appeler <code>calculateSumAsync</code>, puis afficher le résultat une fois qu'il est prêt.
+  </p>
+
+  <h2>Exercice 2</h2>
+  <p>
+    Créez une fonction <code>verifyUser</code> qui prend un nom d'utilisateur et un mot de passe comme arguments. Cette fonction doit retourner une promesse (<code>Promise</code>) qui se résout (<code>resolve</code>) si le nom d'utilisateur et le mot de passe sont corrects, et se rejette (<code>reject</code>) si l'un d'eux est incorrect.
+  </p>
+  <p>
+    Utilisez <code>then</code> et <code>catch</code> pour gérer la promesse retournée par <code>verifyUser</code>. Si la promesse est résolue, affichez un message de bienvenue à l'utilisateur. Si la promesse est rejetée, affichez un message d'erreur.
+  </p>
+
+  <h2>Exercice 3</h2>
+  <p>
+    Reprenez les exercices 1 et 2 mais cette fois-ci utilisez des classes (<code>Calculator</code> pour l'exercice 1 et <code>User</code> pour l'exercice 2).
+  </p>
+  <p>
+    La fonction <code>calculateSumAsync</code> doit être une méthode de la classe <code>Calculator</code> et la fonction <code>verifyUser</code> doit être une méthode de la classe <code>User</code>.
+  </p>
+</body>
+</html>

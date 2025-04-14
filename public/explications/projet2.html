@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Explications -->
+            <a href="../../projets/projet2/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Astro + TypeScript</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercice</h1>
+  <p>
+    Créer une application web servie avec <strong>Astro</strong>, en <strong>TypeScript</strong> qui affiche :
+    <strong>"Bonjour, TypeScript!"</strong> dans la page web.
+  </p>
+
+  <h2>Étapes à suivre :</h2>
+  <ol>
+    <li>Créer <code>programmétiquement</code> (depuis le script TypeScript) un <code>&lt;div&gt;</code> avec un <code>id="app"</code>.</li>
+    <li>Créer un <code>&lt;h1&gt;</code> avec le texte <strong>"Bonjour, TypeScript!"</strong>.</li>
+    <li>Ajouter le <code>&lt;h1&gt;</code> dans le <code>&lt;div&gt;</code>.</li>
+    <li>Ajouter le <code>&lt;div&gt;</code> dans le <code>&lt;body&gt;</code>.</li>
+    <li>Démarrer un serveur avec <strong>Astro</strong>.</li>
+    <li>Déboguer dans Chrome votre application.</li>
+  </ol>
+
+</body>
+</html>

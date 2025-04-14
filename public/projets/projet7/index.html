@@ -1,39 +1,95 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>WebDev101 Telecom Paris</title></head> <body> <script type="module">setInterval(()=>{document.addEventListener("mousemove",e=>{console.log(`x: ${e.clientX}, y: ${e.clientY}`)})},1e3);</script> <script type="module">const c=(o,l)=>o+l;console.log(c(5,3));const n=(o,l)=>o-l;console.log(n(5,3));const t=(o,l)=>o*l;console.log(t(5,3));const e=(o,l)=>o/l;console.log(e(5,3));const g=(o,l,s)=>{console.log(`Le résultat est: ${s(o,l)}`)};console.log(g(5,3,c));</script> <script type="module">document.addEventListener("click",c=>{console.log(`x : ${c.clientX}, y : ${c.clientY}`)});</script> </body> </html>
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+              margin: 0;
+              padding: 2rem;
+              background-color: white;
+              color: black;
+              font-family: sans-serif;
+            }
+            iframe {
+              width: 100%;
+              height: 400px;
+              border: 2px solid #555;
+              border-radius: 8px;
+              margin-bottom: 2rem;
+            }
+          </style>
+    </head> 
+    <body>
+        <h1>Projet 7</h1>
+
+        <h2>Exercice 1</h2>
+        <iframe src="ex1/viewer.html"></iframe>
+      
+        <h2>Exercice 2</h2>
+        <iframe src="ex2/viewer.html"></iframe>
+      
+        <h2>Exercice 3</h2>
+        <iframe src="ex3/viewer.html"></iframe>
+      </body>
+      </html>
+      
+    </body> 
+</html>
+
+
+
+
+
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebDev101 Telecom Paris</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            position: relative;
-        }
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
 
-        .return-button {
-            background-color: #4a90e2;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-    </style>
-</head>
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
 
-<body>
-    <a href="/" class="return-button">Retour</a>
-</body>
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
 
-
+    <body>
+        <div class="button-container">
+            <!-- Bouton Explications -->
+            <a href="../../explications/projet7.html" class="explications-button">Explications</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
 </html>

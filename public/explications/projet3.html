@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Explications -->
+            <a href="../../projets/projet3/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Astro + TypeScript</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercice</h1>
+  <p>
+    Créez une application avec trois fichiers : <code>calculJours.ts</code>, <code>moduleVacances.ts</code> et <code>moduleTravail.ts</code> 
+    qui utilisent des modules pour calculer le nombre de jours de vacances restants et le nombre de jours de travail restants pour un employé.
+  </p>
+
+  <h2>Étapes à suivre :</h2>
+  <ol>
+    <li>
+      Dans les deux modules <code>moduleVacances.ts</code> et <code>moduleTravail.ts</code>, créez la fonction 
+      <code>calculerJoursRestants</code> avec le même nom dans les deux modules, qui prend en paramètre le nombre de jours 
+      de vacances ou de travail déjà pris et retourne le nombre de jours restants.
+    </li>
+    <li>
+      Vous pouvez inventer les règles pour le calcul des jours de vacances et de travail restants.
+    </li>
+    <li>
+      Exportez la fonction qui a le même nom avec <code>export</code> dans les deux modules.
+    </li>
+    <li>
+      Dans le fichier <code>calculJours.ts</code>, importez les deux modules et utilisez la fonction 
+      <code>calculerJoursRestants</code> pour afficher le nombre de jours de vacances et de travail restants pour un employé.
+    </li>
+    <li>
+      Vous devez résoudre le conflit de nom entre les deux modules 
+      (<em>voir la partie "gestion des conflits de nommage" dans la lecture ci-dessus</em>).
+    </li>
+    <li>
+      Affichez les résultats dans des balises <code>&lt;div&gt;</code> avec <code>createElement</code> et <code>appendChild</code>.
+    </li>
+  </ol>
+</body>
+</html>

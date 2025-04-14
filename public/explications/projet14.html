@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet14/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Adresse Service</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercice</h1>
+  <p>
+    D'après la documentation, le retour est un geojson FeatureCollection respectant la spec GeoCodeJSON (trouvez les informations nécessaires pour extraire les données qui vous intéressent).
+  </p>
+
+  <h2>Étapes à suivre :</h2>
+  <ol>
+    <li>
+      Créez une interface <code>Address</code> pour représenter un résultat de recherche d'adresse, nous sommes intéressés par le nom de la ville, le code postal, le nom de la rue, le numéro, le contexte (numéro du département, nom du département et de la région) ainsi que la latitude et la longitude.
+    </li>
+    <li>
+      Cette interface doit donc contenir les propriétés suivantes : <code>city</code>, <code>postcode</code>, <code>street</code>, <code>housenumber</code>, <code>context</code>, <code>lat</code> et <code>lon</code>.
+    </li>
+    <li>
+      Attention car ces propriétés ne sont pas directement accessibles à la racine de l'objet retourné par l'API, vous devrez les extraire du champ <code>properties</code> de chaque objet <code>Feature</code> du tableau <code>features</code> retourné par l'API.
+    </li>
+    <li>
+      Créez une nouvelle classe <code>AddressService</code> avec une méthode <code>searchAddress</code> qui doit accepter deux paramètres : <code>query</code> (une chaîne de caractères représentant l'adresse à rechercher) et <code>limit</code> (un nombre entier représentant le nombre maximum de résultats à retourner).
+    </li>
+    <li>
+      La méthode <code>searchAddress</code> doit retourner une promesse (<code>Promise</code>) qui se résout avec les résultats de la recherche d'adresses.
+    </li>
+    <li>
+      Faites en sorte que la <code>query</code> soit encodée pour être utilisée dans une URL, c'est à dire que les espaces et autres caractères spéciaux soient encodés en général avec des pourcentages. Par exemple, la chaîne <code>"8 bd du port"</code> doit être transformée en <code>"8%20bd%20du%20port"</code> pour être utilisée dans une URL.
+    </li>
+    <li>
+      Utilisez la fonction prédéfinie <code>encodeURIComponent</code> pour cela.
+    </li>
+    <li>
+      Utilisez <code>fetch</code> pour faire une requête GET à l'URL <code>https://api-adresse.data.gouv.fr/search/</code>.
+    </li>
+    <li>
+      Ajoutez les paramètres <code>q</code> et <code>limit</code> à l'URL avec les valeurs fournies.
+    </li>
+    <li>
+      Créez une instance de <code>AddressService</code> et utilisez-la pour rechercher une adresse avec la chaîne <code>"8 bd du port"</code>.
+    </li>
+    <li>
+      Ajoutez une méthode pour afficher les résultats dans la console ainsi que sur la page web, en particulier les propriétés <code>city</code>, <code>postcode</code>, <code>street</code>, <code>housenumber</code>, <code>context</code>, <code>lat</code> et <code>lon</code> de chaque résultat.
+    </li>
+    <li>
+      Vous pouvez utiliser une liste HTML pour afficher les résultats.
+    </li>
+    <li>
+      Gérez les erreurs qui peuvent survenir lors de la réalisation de la requête à l'API.
+    </li>
+  </ol>
+
+</body>
+</html>

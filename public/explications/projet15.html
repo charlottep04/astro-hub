@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet15/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Playlist Deezer</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      padding: 10px;
+      margin: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    img {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercice</h1>
+  <p>
+    Faites une application qui s'exécute côté SERVEUR (pour ne pas être bloqué par CORS) et qui affiche une liste des titres de la playlist "top 100 France 2023" disponible à l'adresse suivante :
+    <a href="https://api.deezer.com/playlist/11846226041" target="_blank">https://api.deezer.com/playlist/11846226041</a>
+  </p>
+  
+  <h2>Étapes à suivre :</h2>
+  <ol>
+    <li>
+      Créez une application serveur pour récupérer les données de la playlist Deezer. Utilisez un framework côté serveur (comme Express pour Node.js) afin de contourner le problème du CORS.
+    </li>
+    <li>
+      Récupérez les informations nécessaires pour chaque chanson dans la playlist, notamment : le titre, l'artiste, l'album, l'album cover (petite image), et un extrait audio en format mp3.
+    </li>
+    <li>
+      Affichez les résultats sous forme de liste non ordonnée (<code>&lt;ul&gt;</code>) où chaque chanson est un élément de liste (<code>&lt;li&gt;</code>).
+    </li>
+    <li>
+      Pour chaque chanson, incluez les informations suivantes :
+      <ul>
+        <li>Le titre de la chanson</li>
+        <li>Le nom de l'artiste</li>
+        <li>Le titre de l'album</li>
+        <li>Une image de l'album (<code>&lt;img&gt;</code>)</li>
+        <li>Un lecteur audio pour écouter un extrait (<code>&lt;audio&gt;</code>)</li>
+      </ul>
+    </li>
+    <li>
+      Assurez-vous que l'attribut <code>preload="none"</code> est utilisé dans la balise <code>&lt;audio&gt;</code> afin d'éviter de télécharger les extraits de chansons au démarrage.
+    </li>
+  </ol>
+
+
+</body>
+</html>

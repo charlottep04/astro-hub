@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Affichage Code + Console</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      font-family: monospace;
+      background-color: #2d2d2d;
+      color: white;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 1rem;
+      overflow: auto;
+    }
+
+    .left {
+      border-right: 2px solid #444;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+
+    .terminal {
+      background-color: #000;
+      color: #0f0;
+      padding: 1rem;
+      border-radius: 6px;
+      min-height: 100%;
+      white-space: pre-wrap;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h3>Code source (exo_class.ts)</h3>
+    <pre><code id="ts-code" class="language-typescript">// Chargement...</code></pre>
+  </div>
+
+  <div class="right">
+    <h3>Sortie console</h3>
+    <div id="terminal" class="terminal"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+
+  <!-- Afficher le code source -->
+  <script>
+    fetch('./exo_class.ts')
+      .then(r => r.text())
+      .then(code => {
+        const block = document.getElementById('ts-code');
+        block.textContent = code;
+        Prism.highlightElement(block);
+      });
+  </script>
+
+  <!-- Console redirigée -->
+  <script>
+    const terminal = document.getElementById('terminal');
+    const originalLog = console.log;
+
+    console.log = (...args) => {
+      const output = args.map(a =>
+        typeof a === 'object' ? JSON.stringify(a, null, 2) : a
+      ).join(' ');
+      terminal.innerHTML += output + '<br>';
+      terminal.scrollTop = terminal.scrollHeight;
+      originalLog.apply(console, args);
+    };
+
+    console.log('[Terminal démarré]');
+  </script>
+
+  <!-- Lancer le code compilé -->
+  <script type="module" src="./exo_class.js"></script>
+</body>
+</html>

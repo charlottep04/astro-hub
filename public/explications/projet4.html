@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet4/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Calcul côté client ou serveur</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercice : Calcul côté client ou côté serveur ?</h1>
+
+  <p>
+    Regardez bien tous les fichiers source fournis dans le projet Astro. <code>index.astro</code> et <code>moduleWeatherServerSide.ts</code> sont dans le dossier <code>src/pages</code> et <code>app.ts</code> ainsi que <code>moduleWeatherClientSide.ts</code> sont dans le dossier <code>src/scripts</code>.
+  </p>
+
+  <p>
+    Ajoutez des <code>console.log("message")</code> juste avant les <code>return</code> (en changeant "message" par ce que vous voulez) dans les fonctions 
+    <code>getCurrentHumidity</code>, <code>getCurrentWind</code>
+    <p>
+    Où s'affichent les 4 messages ? Dans le terminal du serveur Astro ou dans la console du navigateur ? Pourquoi ?
+    </p>
+</body>
+</html>

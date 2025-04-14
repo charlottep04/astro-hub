@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet10/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Interface IUser & Sérialisation</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercice</h1>
+  <p>
+    Créez une interface <code>IUser</code> qui représente un utilisateur avec les propriétés <code>id</code>, <code>name</code>, <code>age</code>,
+    et un tableau de scores <code>scores</code> (qui sont des nombres entiers) et les méthodes <code>getMaxScore</code> et <code>getAverageScore</code>.
+  </p>
+
+  <ol>
+    <li>
+      Créez une classe <code>User</code> qui implémente <code>IUser</code>.
+    </li>
+    <li>
+      Créez trois instances de <code>User</code>.
+    </li>
+    <li>
+      Créez un tableau contenant des <code>IUser</code> (attention, c'est bien des <code>IUser</code> et non des <code>User</code>) et mettez-y les trois instances de <code>User</code> que vous avez créées.
+    </li>
+    <li>
+      Créez une fonction <code>serializeUsers</code> qui sérialise un tableau de <code>IUser</code> en une chaîne JSON.
+      Appelez cette fonction avec le tableau que vous avez créé à l'étape 4 et affichez le résultat dans la console.
+    </li>
+    <li>
+      Créez une fonction <code>deserializeUsers</code> qui prend une chaîne JSON et retourne un tableau de <code>IUser</code>.
+      Appelez cette fonction avec le résultat de la fonction <code>serializeUsers</code> et affichez le résultat dans la console.
+    </li>
+    <li>
+      Est-il possible d'appeler les méthodes <code>getMaxScore</code> et <code>getAverageScore</code> des objets désérialisés lors de l'étape précédente ? Pourquoi ?
+    </li>
+    <li>
+      Trouvez une façon de rendre possible l'appel des méthodes <code>getMaxScore</code> et <code>getAverageScore</code> des objets désérialisés.
+      Pour cela vous pouvez créer, pour chaque objet désérialisé, une nouvelle instance de la classe <code>User</code> et copier les propriétés de l'objet désérialisé dans l'instance de <code>User</code>.
+    </li>
+    <li>
+      Affichez le nom du deuxième utilisateur du tableau désérialisé ainsi que son score le plus élevé et son score moyen.
+    </li>
+  </ol>
+
+  </code></pre>
+</body>
+</html>

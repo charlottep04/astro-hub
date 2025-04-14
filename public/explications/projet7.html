@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercices </title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      color: white;
+    }
+    ol {
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercices </h1>
+
+  <h2>Exercice 1 : Événement de clic</h2>
+  <p>
+    Faites un projet <strong>Astro</strong> et faites en sorte que le fichier <code>app.ts</code> soit exécuté dans le navigateur (côté client). Cela permet d'accéder à l'objet <code>document</code> qui représente la page web affichée dans le navigateur.
+  </p>
+  <p>
+    Ajoutez un <code>addEventListener</code> sur <code>document</code> pour afficher les coordonnées du clic de la souris.
+  </p>
+  <p>
+    Testez et vérifiez qu'à chaque clic de la souris, les coordonnées du clic sont affichées dans la console du navigateur.
+  </p>
+
+  <h2>Exercice 2 : Calculatrice simple</h2>
+  <p>Faites une application de calculatrice.</p>
+  <ul>
+    <li>Créez une fonction fléchée <code>additionner</code> qui prend deux nombres en paramètres et retourne leur somme.</li>
+    <li>Créez une fonction fléchée <code>soustraire</code> qui prend deux nombres en paramètres et retourne leur différence.</li>
+    <li>Créez une fonction fléchée <code>multiplier</code> qui prend deux nombres en paramètres et retourne leur produit.</li>
+    <li>Créez une fonction fléchée <code>diviser</code> qui prend deux nombres en paramètres et retourne leur quotient.</li>
+    <li>
+      Créez une fonction fléchée <code>calculatrice</code> qui prend trois paramètres :
+      deux nombres et une opération sous forme de chaîne de caractères ("additionner", "soustraire", "multiplier", "diviser").
+    </li>
+    <li>Cette fonction doit utiliser une instruction pour déterminer quelle opération effectuer, puis appeler la fonction appropriée et afficher le résultat.</li>
+  </ul>
+
+  <h2>Exercice 3 : Affichage régulier des coordonnées de la souris</h2>
+  <p>
+    Faites une application qui affiche les coordonnées de la souris toutes les secondes dans la console du navigateur.
+  </p>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet7/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>

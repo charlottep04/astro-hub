@@ -42,8 +42,15 @@ const projets = [
         font-size: 2.5em;
       }
 
-      .dropdown {
+      .button-container {
         margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Espace entre les boutons */
+      }
+
+      .dropdown {
         position: relative;
         display: inline-block;
       }
@@ -89,35 +96,49 @@ const projets = [
       }
 
       html, body {
-    height: 100%; /* Assure que le corps occupe toute la hauteur de la fenêtre */
-    margin: 0;
-    }
+        height: 100%; /* Assure que le corps occupe toute la hauteur de la fenêtre */
+        margin: 0;
+      }
 
-    body {
+      body {
         display: flex;
         flex-direction: column;
-    }
-    
+      }
 
       footer {
-      margin-top: auto;
-      color: #888;
-      font-size: 0.9em;
-    }
+        margin-top: auto;
+        color: #888;
+        font-size: 0.9em;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Bienvenue sur mon site web !</h1>
-      <p>Voici la liste des projets réalisés :</p>
+      <p>Ce site regroupe les différents projets réalisés par Charlotte Poupat pour l'UE Typescript.
+        <br> Vous trouverez d'un côté les explications des projets et de l'autre les projets eux-mêmes.
+        <br> Vous pouvez naviguer entre les deux en utilisant les boutons ci-dessous.
+        <br> Bonne navigation !
+      </p>
     </header>
 
-    <div class="dropdown">
-      <button class="dropdown-button">Voir les projets ▼</button>
-      <div class="dropdown-content">
-        {projets.map((projet) => (
-          <a href={`/projets/${projet.id}/index.html`}>{projet.title}</a>
-        ))}
+    <div class="button-container">
+      <div class="dropdown">
+        <button class="dropdown-button">Explications des projets ▼</button>
+        <div class="dropdown-content">
+          {projets.map((projet) => (
+            <a href={`/explications/${projet.id}.html`}>{projet.title}</a>
+          ))}
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-button">Voir les projets ▼</button>
+        <div class="dropdown-content">
+          {projets.map((projet) => (
+            <a href={`/projets/${projet.id}/index.html`}>{projet.title}</a>
+          ))}
+        </div>
       </div>
     </div>
 

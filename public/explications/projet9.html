@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet9/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Interface IVehicle et classes dérivées</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: black;
+    }
+
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      color: white;
+    }
+
+    ol {
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exercice </h1>
+
+  <h2>Instructions</h2>
+  <ol>
+    <li>Créez une interface <code>IVehicle</code> qui définit deux méthodes :
+      <ul>
+        <li><code>drive(): void</code></li>
+        <li><code>honk(): void</code></li>
+      </ul>
+    </li>
+    <li>Créez une classe abstraite <code>Vehicle</code> qui implémente <code>IVehicle</code> :
+      <ul>
+        <li>Ajoutez une propriété <code>speed</code>.</li>
+        <li>Implémentez la méthode <code>drive</code> avec <code>console.log("Driving at ${this.speed} km/h")</code>.</li>
+        <li>Déclarez une méthode abstraite <code>honk(): void</code>.</li>
+      </ul>
+    </li>
+    <li>Créez une classe <code>Car</code> qui hérite de <code>Vehicle</code> et implémente <code>honk()</code> en affichant <code>"Beep beep!"</code>.</li>
+    <li>Créez une classe <code>Bicycle</code> qui hérite de <code>Vehicle</code> et implémente <code>honk()</code> en affichant <code>"Ring Ring"</code>.</li>
+    <li>Instanciez deux objets <code>Car</code> et trois <code>Bicycle</code> avec des vitesses différentes.</li>
+    <li>Ajoutez-les à un tableau <code>vehicles</code> de type <code>IVehicle[]</code>.</li>
+    <li>Parcourez le tableau avec une boucle <code>for...of</code> et appelez <code>drive()</code> puis <code>honk()</code> sur chaque objet.</li>
+  </ol>
+
+</body>
+</html>
+

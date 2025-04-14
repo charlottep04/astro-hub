@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Voir le projet -->
+            <a href="../../projets/projet8/index.html" class="explications-button">Voir le projet</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Retour</a>
+        </div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice – Fruits !</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: black;
+    }
+    code {
+      background-color: #2d2d2d;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background-color: #2d2d2d;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercice</h1>
+  <p>
+    Créez un tableau de chaînes de caractères qui représentent des noms de fruits (le tableau initial) :
+    <code>"pomme", "kiwi", "banane", "cerise", "orange", "poire", "fraise", "prune", "ananas", "pêche"</code>
+  </p>
+
+  <h2>Instructions :</h2>
+  <ol>
+    <li>
+      À partir du tableau initial, utilisez la méthode <code>map</code> et une fonction fléchée pour créer un nouveau tableau
+      où chaque fruit est écrit en majuscules.
+    </li>
+    <li>
+      À partir du tableau initial, utilisez la méthode <code>filter</code> et une fonction fléchée pour créer un nouveau tableau
+      qui ne contient que les fruits qui commencent par la lettre <code>'p'</code>.
+    </li>
+    <li>
+      À partir du tableau initial, utilisez la méthode <code>reduce</code> et une fonction fléchée pour obtenir une seule chaîne
+      qui contient tous les noms de fruits séparés par des virgules.
+    </li>
+    <li>
+      À partir du tableau initial, utilisez la méthode <code>find</code> et une fonction fléchée pour trouver le premier fruit
+      qui a plus de 5 lettres.
+    </li>
+  </ol>
+
+</body>
+</html>
