@@ -71,6 +71,28 @@
             .return-button:hover, .explications-button:hover {
                 background-color: #357ab7;
             }
+            .navigation-buttons {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .prev-button, .next-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .prev-button:hover, .next-button:hover {
+                background-color: #357ab7;
+            }
         </style>
     </head>
 
@@ -79,7 +101,13 @@
             <!-- Bouton Explications -->
             <a href="../../explications/projet15.html" class="explications-button">Explications</a>
             <!-- Bouton Retour -->
-            <a href="/" class="return-button">Retour</a>
+            <a href="/" class="return-button">Home</a>
         </div>
+        <div class="navigation-buttons">
+            <!-- Bouton Précédent -->
+            <a href="../projet14/index.html" class="prev-button">Précédent</a>
+            <!-- Bouton Suivant 
+            <a href="../projet/index.html" class="next-button">Suivant</a>
+          ---></div>
     </body>
 </html>
