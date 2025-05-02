@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
@@ -42,7 +43,7 @@
     <body>
         <div class="button-container">
             <!-- Bouton Voir le projet -->
-            <a href="../../projets/projet15/index.html" class="explications-button">Voir le projet</a>
+            <a href="../../projets/projet1/index.html" class="explications-button">Voir le projet</a>
             <!-- Bouton Retour -->
             <a href="/" class="return-button">Home</a>
         </div>
@@ -53,7 +54,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Exercice – Playlist Deezer</title>
+  <title>Exercice </title>
   <style>
     body {
       background-color: white;
@@ -62,7 +63,7 @@
       padding: 2rem;
       line-height: 1.6;
     }
-    h1 {
+    h1, h2 {
       color: black;
     }
     code {
@@ -78,55 +79,15 @@
       border-radius: 8px;
       overflow-x: auto;
     }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      padding: 10px;
-      margin: 10px 0;
-      border-bottom: 1px solid #ddd;
-    }
-    img {
-      max-width: 100px;
-      margin-right: 10px;
-    }
   </style>
 </head>
 <body>
-  <h1>Exercice</h1>
+  <h1>Exercice : le typage dans typescript </h1>
+
   <p>
-    Faites une application qui s'exécute côté SERVEUR (pour ne pas être bloqué par CORS) et qui affiche une liste des titres de la playlist "top 100 France 2023" disponible à l'adresse suivante :
-    <a href="https://api.deezer.com/playlist/11846226041" target="_blank">https://api.deezer.com/playlist/11846226041</a>
+    <br> Comparez le fichier <code>hello.js</code> et <code>hello.ts</code>
+    <br>Déduisez l'étape de transpilation. 
+    <br>A quoi sert le typage fort dans typescript qui n'existe pas dans javascript ? 
   </p>
-  
-  <h2>Étapes à suivre :</h2>
-  <ol>
-    <li>
-      Créez une application serveur pour récupérer les données de la playlist Deezer. Utilisez un framework côté serveur (comme Express pour Node.js) afin de contourner le problème du CORS.
-    </li>
-    <li>
-      Récupérez les informations nécessaires pour chaque chanson dans la playlist, notamment : le titre, l'artiste, l'album, l'album cover (petite image), et un extrait audio en format mp3.
-    </li>
-    <li>
-      Affichez les résultats sous forme de liste non ordonnée (<code>&lt;ul&gt;</code>) où chaque chanson est un élément de liste (<code>&lt;li&gt;</code>).
-    </li>
-    <li>
-      Pour chaque chanson, incluez les informations suivantes :
-      <ul>
-        <li>Le titre de la chanson</li>
-        <li>Le nom de l'artiste</li>
-        <li>Le titre de l'album</li>
-        <li>Une image de l'album (<code>&lt;img&gt;</code>)</li>
-        <li>Un lecteur audio pour écouter un extrait (<code>&lt;audio&gt;</code>)
-       </li>
-      </ul>
-    </li>
-    <li>
-      Assurez-vous que l'attribut <code>preload="none"</code> est utilisé dans la balise <code>&lt;audio&gt;</code> afin d'éviter de télécharger les extraits de chansons au démarrage.
-    </li>
-  </ol>
-
-
 </body>
 </html>

@@ -1,99 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>hello.ts – Code + Console</title>
-
-  <!-- Prism pour la coloration syntaxique -->
-  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      height: 100vh;
-      font-family: 'Courier New', monospace;
-      background-color: #2d2d2d;
-      color: white;
-    }
-
-    .left, .right {
-      flex: 1;
-      padding: 1rem;
-      box-sizing: border-box;
-      overflow: auto;
-    }
-
-    .left {
-      border-right: 2px solid #444;
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    pre {
-      border-radius: 8px;
-      background-color: #1e1e1e;
-      padding: 1rem;
-    }
-
-    .terminal {
-      background-color: #000;
-      color: #00ff00;
-      padding: 1rem;
-      border-radius: 8px;
-      min-height: 300px;
-      white-space: pre-wrap;
-      font-size: 0.95em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Transpilation TypeScript vers JavaScript</title>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+      h1, h2 {
+        color: black;
+      }
+      code {
+        background-color: #2d2d2d;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        color: white;
+        font-family: Consolas, monospace;
+      }
+      pre {
+        background-color: #2d2d2d;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+    </style>
 </head>
 <body>
-  <!-- Code source -->
-  <div class="left">
-    <h2>Code source (hello.ts)</h2>
-    <pre><code id="ts-code" class="language-typescript">// Chargement...</code></pre>
-  </div>
+    <h1>La transpilation TypeScript vers JavaScript</h1>
+    <p>
+        La transpilation est le processus de conversion du code TypeScript en code JavaScript.
+        TypeScript est un sur-ensemble de JavaScript qui ajoute des fonctionnalités supplémentaires
+        comme le typage statique. Le compilateur TypeScript (<code>tsc</code>) prend le fichier
+        <code>.ts</code> et génère un fichier <code>.js</code> équivalent en supprimant les
+        annotations de type et en conservant la logique du code.
+    </p>
 
-  <!-- Console simulée -->
-  <div class="right">
-    <h2>Sortie de la console</h2>
-    <div id="terminal" class="terminal"></div>
-  </div>
+    <h2>Comparaison des fichiers</h2>
+    <h3>TypeScript (<code>hello.ts</code>) :</h3>
+    <ul>
+        <li>Contient des annotations de type (<code>: string</code>).</li>
+        <li>Utilise des fonctionnalités de typage statique pour vérifier les types à la compilation.</li>
+        <li>Utilise <code>const</code> pour déclarer une constante.</li>
+    </ul>
 
-  <!-- Prism -->
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+    <h3>JavaScript (<code>hello.js</code>) :</h3>
+    <ul>
+        <li>Ne contient pas d'annotations de type.</li>
+        <li>Utilise <code>var</code> pour déclarer une variable, ce qui a une portée différente et peut entraîner des comportements inattendus par rapport à <code>const</code>.</li>
+    </ul>
 
-  <!-- Charger le contenu de exo_class.ts -->
-  <script>
-    fetch('./hello.ts')
-      .then(r => r.text())
-      .then(code => {
-        const block = document.getElementById('ts-code');
-        block.textContent = code;
-        Prism.highlightElement(block);
-      });
-  </script>
+    <h2>Utilité du typage fort en TypeScript</h2>
+    <p>
+        Le typage fort en TypeScript offre plusieurs avantages par rapport à JavaScript :
+    </p>
+    <h3>Détection des erreurs à la compilation :</h3>
+    <ul>
+        <li>Les erreurs de type sont détectées lors de la compilation, ce qui permet de les corriger avant l'exécution du code.</li>
+    </ul>
 
-  <!-- Rediriger console.log vers notre terminal visuel -->
-  <script>
-    const terminal = document.getElementById('terminal');
-    const originalLog = console.log;
+    <h3>Maintenance et lisibilité du code :</h3>
+    <ul>
+        <li>Le typage explicite rend le code plus facile à comprendre et à maintenir car les types des variables et des fonctions sont clairement définis.</li>
+    </ul>
 
-    console.log = (...args) => {
-      const output = args.map(a =>
-        typeof a === 'object' ? JSON.stringify(a, null, 2) : a
-      ).join(' ');
-      terminal.innerHTML += output + '<br>';
-      terminal.scrollTop = terminal.scrollHeight;
-      originalLog.apply(console, args);
-    };
-
-  </script>
-
-  <!-- Charger le JS compilé -->
-  <script type="module" src="./hello.js"></script>
+    <h3>Réduction des bugs :</h3>
+    <ul>
+        <li>Le typage statique aide à prévenir les erreurs courantes liées aux types comme l'utilisation de méthodes sur des types incorrects.</li>
+    </ul>
 </body>
 </html>
