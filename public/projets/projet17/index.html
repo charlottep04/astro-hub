@@ -1,31 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html> 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WebDev101 Telecom Paris</title>
-        <style>
-            body {
-              margin: 0;
-              padding: 2rem;
-              background-color: white;
-              color: black;
-              font-family: sans-serif;
-            }
-            iframe {
-              width: 100%;
-              height: 400px;
-              border: 2px solid #555;
-              border-radius: 8px;
-              margin-bottom: 2rem;
-            }
-          </style>
-    </head> 
-    <body>
-        <h1>Projet 15</h1>
-
-        <iframe src="viewer.html"></iframe>
-    </body> 
+        <title>webdev101 remi sharrock</title>
+        <meta charset="UTF-8"></head> 
+        <body>
+             <script type="module">window.onload=()=>{new s};class s{myForm;nameInput;result;isStudent;constructor(){this.myForm=document.getElementById("myForm"),this.nameInput=document.getElementById("name"),this.result=document.getElementById("result"),this.isStudent=document.getElementById("isStudent"),this.myForm.addEventListener("submit",this.handleSubmit.bind(this))}handleSubmit(n){n.preventDefault();const t=this.nameInput.value;t.length<4?(this.result.style.color="red",this.result.textContent="Name must be at least 4 characters long."):(this.result.style.color="green",this.isStudent.checked?this.result.textContent=`Name Ok: ${t}, you are a student`:this.result.textContent=`Name Ok: ${t}, you are not a student`,fetch("/submit-name",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:t})}).then(e=>{if(!e.ok)throw new Error("Failed to send name to the server");return e.json()}).then(e=>{console.log("Server response:",e.message)}).catch(e=>{console.error("Error:",e)}))}}
+             </script> <form id="myForm"> <label for="name">Name:</label> <input type="text" id="name"> <label for="checkbox">Student</label> <input type="checkbox" id="isStudent"> <button type="submit">Submit</button> <div id="result"></div> </form> 
+        </body>
 </html>
 
 
@@ -99,15 +80,12 @@
     <body>
         <div class="button-container">
             <!-- Bouton Explications -->
-            <a href="../../explications/projet15.html" class="explications-button">Explications</a>
+            <a href="../../explications/projet17.html" class="explications-button">Explications</a>
             <!-- Bouton Retour -->
             <a href="/" class="return-button">Home</a>
         </div>
         <div class="navigation-buttons">
             <!-- Bouton Précédent -->
-            <a href="../projet14/index.html" class="prev-button">Précédent</a>
-            <!-- Bouton Suivant -->
-            <a href="../projet16/index.html" class="next-button">Suivant</a>
-        </div>
+            <a href="../projet16/index.html" class="prev-button">Précédent</a>
     </body>
 </html>
