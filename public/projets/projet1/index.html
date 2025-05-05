@@ -73,3 +73,82 @@
     </ul>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDev101 Telecom Paris</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                font-family: sans-serif;
+            }
+
+            .button-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .return-button, .explications-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .return-button:hover, .explications-button:hover {
+                background-color: #357ab7;
+            }
+            
+            .navigation-buttons {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px; /* Espace entre les boutons */
+            }
+
+            .prev-button, .next-button {
+                background-color: #4a90e2;
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .prev-button:hover, .next-button:hover {
+                background-color: #357ab7;
+            }
+                          
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <!-- Bouton Explications -->
+            <a href="../../explications/projet1.html" class="explications-button">Explications</a>
+            <!-- Bouton Retour -->
+            <a href="/" class="return-button">Home</a>
+        </div>
+        <div class="navigation-buttons">
+            <!-- Bouton Suivant -->
+            <a href="../projet2/index.html" class="next-button">Suivant</a>
+          </div>
+    </body>
+</html>

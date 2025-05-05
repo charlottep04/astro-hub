@@ -85,29 +85,11 @@
 </head>
 <body>
   <h1>Exercice</h1>
-  <p>
-    Créez une application côté serveur (car l'API bloque en CORS) qui utilise l'API REST publique 
-    <a href="https://docs.openaq.org/" target="_blank">OpenAQ</a>. Cette API fournit des données sur la qualité de l'air dans le monde entier.
-    Vous devez d'abord vous inscrire sur le site (et valider votre email) pour avoir une clé d'accès API qui sera disponible sur votre compte une fois connecté.
-  </p>
 
-  <h2>Fonctionnalités attendues</h2>
   <ul>
-    <li>Afficher un formulaire demandant à l'utilisateur d'entrer le nom d'un pays.</li>
-    <li>Lorsque l'utilisateur soumet le formulaire, votre application doit faire une requête GET à l'API pour récupérer une liste des locations du pays.</li>
-    <li>Afficher la liste des locations dans une liste déroulante (<code>&lt;select&gt;</code>).</li>
-    <li>Lorsque l'utilisateur sélectionne un emplacement, faire une autre requête GET à l'API pour récupérer les mesures de qualité de l'air pour cet emplacement.</li>
-    <li>Afficher les mesures de qualité de l'air dans un tableau.</li>
-    <li>Chaque mesure doit afficher :
-      <ul>
-        <li>le nom du polluant</li>
-        <li>la valeur mesurée</li>
-        <li>l'unité de mesure</li>
-      </ul>
-    </li>
-    <li>Les mesures doivent être affichées dans un format facile à lire.</li>
-    <li>L'application doit actualiser les données à intervalles réguliers.</li>
-    <li>Si le pays entré par l'utilisateur n'est pas disponible dans l'API, l'application doit en informer l'utilisateur.</li>
+    <li>Afficher un formulaire demandant à l'utilisateur d'entrer son nom.</li>
+    <li>Possibilité de cocher si la personne est un étudiant ou non</li>
+    <li>Afficher un message de bienvenue personnalisé en fonction de l'entrée de l'utilisateur.</li>
   </ul>
 </body>
 </html>
